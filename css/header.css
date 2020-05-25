@@ -1,69 +1,198 @@
 .header {
-    position: absolute;
-    width: 100%;
-    z-index: 50;
-    top: 25px;
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+  top: 15px;
+}
+.header__contanier {
+  max-width: 1130px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 .header__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.menu {
+/* Burger menu */
+.burger__row {
+  display: none;
+  background: black;
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.burger__button {
+  width: 60px;
+  height: 70px;
+  background: transparent;
+  position: relative;
+  outline: none;
+  border: none;
+}
 
+.burger__lines,
+.burger__lines::before,
+.burger__lines::after {
+  width: 40px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 3;
 }
-.menu__list{
+.burger__lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .1s;
+}
+.burger__lines::before {
+  content: "";
+  left: 0;
+  top: -12px;
+  transition: all 250ms;
+}
+.burger__lines::after {
+  content: "";
+  top: 12px;
+  left: 0;
+  transition: all 250ms;
+}
+.burger__logo img {
+  max-height: 70px;
+}
+.burger-icon:first-child {
+  padding-right: 10px;
+}
+.burger__contacts {
+  display: flex;
+  align-items: center;
+}
+.burger__menu_active .burger__lines {
+    background-color: transparent;
+}
+.burger__menu_active .burger__lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger__menu_active .burger__lines::after {
+  top: 0;
+  transform: rotate(-45deg)
+}
+.burger__menu_nav {
+    position: absolute;
+    width: 90%;
+    left: 100%;
+    height: 70px;
+    z-index: 4;
+    background: black;
     display: flex;
+    top: 0;
+    transition: left .3s;
+    align-items: center;
+    font-size: 17px;
+}
+.burger__menu_nav-item {
+    padding-right: 15px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid black;
+}
+.burger__menu_nav-item:hover {
+    background: #34202c;
+    border: 1px solid white;
+}
+.burger__menu_nav-item:last-child {
+    padding-right: 15px;
+    padding: 5px;
+    margin-right: 0;
+}
+
+.burger__menu_active .burger__menu_nav {
+    left: 70px;
+    top: 0;
+}
+/* Burger menu */
+
+
+
+.menu__list {
+  display: flex;
 }
 .menu__list li {
-    display: flex;;
-    padding: 0 25px;
-    margin-bottom: 50px;
+  display: flex;
+  padding: 0 25px;
+  margin-bottom: 50px;
 }
 .menu__list li:first-child {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 .menu__list li:last-child {
-    padding-right: 0px;
+  padding-right: 0px;
 }
 .menu__link {
-    font-size: 19px;
-    font-weight: regular;
+  transition: all 0.2s;
+  font-size: 19px;
+  font-weight: regular;
+  padding: 15px 10px;
+  border: 1px solid transparent;
+}
+.menu__link:hover {
+  background: #34202c;
+  padding: 15px 10px;
+  border: 1px solid white;
 }
 
 .header__logo {
-    transform: translateX(-50%);
-    max-width: 160px;
+  transform: translateX(-50%);
+  max-width: 150px;
 }
 
 @media screen and (max-width: 1100px) {
-    .menu__list li {
-        padding: 0 15px;
-    }
+  .menu__list li {
+    padding: 0 15px;
+  }
 }
 
-
 @media screen and (max-width: 992px) {
-    .header__logo {
-        max-width: 130px;
-    }
-    .menu__list li {
-        padding: 0 10px;
-    }
+  .header__logo {
+    max-width: 130px;
+  }
+  .menu__list li {
+    padding: 0 5px;
+  }
 }
 
 @media screen and (max-width: 860px) {
-   .header {
-       position: absolute;
-       width: 100%;
-       background-color: black;
-       top: 0;
-       padding: 10px 0;
-   }
-   .header__logo {
-       max-width: 75px;
-   }
-   .menu__list li {
+  .header {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    padding: 10px 0;
+  }
+  .header__logo {
+    max-width: 75px;
+  }
+  .menu__list li {
     margin-bottom: 0;
+  }
+  .menu__list li {
+    padding: 0;
+  }
 }
+
+@media screen and (max-width: 760px) {
+  .header__row {
+    display: none;
+  }
+  .burger__row {
+    display: flex;
+  }
 }
