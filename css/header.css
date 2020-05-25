@@ -4,7 +4,7 @@
   z-index: 50;
   top: 15px;
 }
-.header__contanier {
+.header__container {
   max-width: 1130px;
   padding: 0 15px;
   margin: 0 auto;
@@ -27,7 +27,7 @@
   padding: 0 10px;
 }
 .burger__button {
-  width: 60px;
+  width: 50px;
   height: 70px;
   background: transparent;
   position: relative;
@@ -38,8 +38,8 @@
 .burger__lines,
 .burger__lines::before,
 .burger__lines::after {
-  width: 40px;
-  height: 4px;
+  width: 30px;
+  height: 3px;
   border-radius: 20px;
   background-color: #fff;
   position: absolute;
@@ -50,17 +50,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all .1s;
+  transition: all 0.1s;
 }
 .burger__lines::before {
   content: "";
   left: 0;
-  top: -12px;
+  top: -10px;
   transition: all 250ms;
 }
 .burger__lines::after {
   content: "";
-  top: 12px;
+  top: 10px;
   left: 0;
   transition: all 250ms;
 }
@@ -75,7 +75,7 @@
   align-items: center;
 }
 .burger__menu_active .burger__lines {
-    background-color: transparent;
+  background-color: transparent;
 }
 .burger__menu_active .burger__lines::before {
   top: 0;
@@ -83,44 +83,42 @@
 }
 .burger__menu_active .burger__lines::after {
   top: 0;
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }
 .burger__menu_nav {
-    position: absolute;
-    width: 90%;
-    left: 100%;
-    height: 70px;
-    z-index: 4;
-    background: black;
-    display: flex;
-    top: 0;
-    transition: left .3s;
-    align-items: center;
-    font-size: 17px;
+  position: absolute;
+  width: 90%;
+  left: 100%;
+  height: 70px;
+  z-index: 4;
+  background: black;
+  display: flex;
+  top: 0;
+  transition: left 0.3s;
+  align-items: center;
+  font-size: 17px;
 }
 .burger__menu_nav-item {
-    padding-right: 15px;
-    padding: 5px;
-    margin-right: 10px;
-    border: 1px solid black;
+  padding-right: 15px;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid black;
 }
 .burger__menu_nav-item:hover {
-    background: #34202c;
-    border: 1px solid white;
+  background: #34202c;
+  border: 1px solid white;
 }
 .burger__menu_nav-item:last-child {
-    padding-right: 15px;
-    padding: 5px;
-    margin-right: 0;
+  padding-right: 15px;
+  padding: 5px;
+  margin-right: 0;
 }
 
 .burger__menu_active .burger__menu_nav {
-    left: 70px;
-    top: 0;
+  left: 60px;
+  top: 0;
 }
 /* Burger menu */
-
-
 
 .menu__list {
   display: flex;
@@ -189,6 +187,11 @@
 }
 
 @media screen and (max-width: 760px) {
+  .header__container {
+    max-width: 1130px;
+    padding: 0;
+    margin: 0;
+  }
   .header__row {
     display: none;
   }
