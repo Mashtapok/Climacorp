@@ -46,6 +46,9 @@ a {
   border: 2px solid #000;
   border-radius: 60px;
   background: transparent;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .main-button:hover {
@@ -83,7 +86,9 @@ a {
 .condition__bg {
   width: 555px;
   height: 170px;
-  -webkit-transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-image: url("../images/condition.png");
   background-repeat: no-repeat;
@@ -104,6 +109,9 @@ a {
   transform: translateX(-50%); */
 }
 .arrow__block svg {
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
 }
 .arrow__block svg:hover {
