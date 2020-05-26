@@ -17,6 +17,7 @@
 /* Burger menu */
 .burger__row {
   display: none;
+  overflow-x: hidden;
   background: black;
   position: absolute;
   height: 70px;
@@ -89,14 +90,15 @@
   position: absolute;
   width: 90%;
   left: 100%;
+  top: 0;
   height: 70px;
   z-index: 4;
   background: black;
   display: flex;
-  top: 0;
-  transition: left 0.3s;
   align-items: center;
   font-size: 17px;
+  -webkit-transition: left 0.3s; /* Safari<=6 Android<=4.3 */
+  transition: left 0.3s;
 }
 .burger__menu_nav-item {
   padding-right: 15px;
