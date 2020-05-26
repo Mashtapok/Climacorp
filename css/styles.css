@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
 @import "reset.css";
 @import "header.css";
-@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
 
 html,
 body {
@@ -81,14 +81,16 @@ a {
   justify-content: center;
 }
 .condition__bg {
-  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
   width: 555px;
   height: 170px;
+  -webkit-transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   background-image: url("../images/condition.png");
   background-repeat: no-repeat;
 }
 .condition__bg:hover {
   background-image: url("../images/condition-hover.png");
+  -webkit-transform: scale(1.005) translateY(-5px);
   transform: scale(1.005) translateY(-5px);
 }
 .condition-order__block h1 {
@@ -102,10 +104,10 @@ a {
   transform: translateX(-50%); */
 }
 .arrow__block svg {
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 .arrow__block svg:hover {
-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .arrow__up {
   display: none;
@@ -272,7 +274,7 @@ footer {
 .author a {
   color: #ffffff40;
   font-size: 12px;
-  font-family: 'Neucha', cursive;
+  font-family: "Neucha", cursive;
 }
 
 /* -------------------------------------- Media ----------------------------------------- */
@@ -372,6 +374,10 @@ footer {
   .condition-order__block {
     position: relative;
     top: 30px;
+  }
+  .services__header {
+    transform: none;
+    position: initial;
   }
 }
 
