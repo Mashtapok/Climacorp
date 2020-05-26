@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
 @import "reset.css";
 @import "header.css";
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
 html,
 body {
@@ -54,7 +55,7 @@ a {
   border: none;
 }
 
-/* ------------  Услуги ---------------*/
+/* -----------------------------------------------  Услуги -----------------------------------------------*/
 .services__header {
   text-align: center;
   position: absolute;
@@ -66,7 +67,7 @@ a {
   font-size: 50px;
 }
 
-/* ------------  Кондиционер ---------------*/
+/* -----------------------------------------------  Кондиционер -----------------------------------------------*/
 .section_flex {
   height: 100%;
   display: flex;
@@ -84,7 +85,6 @@ a {
   width: 555px;
   height: 170px;
   background: url("../images/condition.png") no-repeat;
-  background-size: contain;
 }
 .condition__bg:hover {
   background: url("../images/condition-hover.png");
@@ -99,8 +99,14 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+.arrow__up {
+  display: none;
+  justify-content: center;
+  position: relative;
+  bottom: 35px;
+}
 
-/* ------------  О нас ---------------*/
+/* -----------------------------------------------  О нас -----------------------------------------------*/
 .about-us_section {
   height: 100%;
   display: flex;
@@ -110,6 +116,7 @@ a {
   text-align: center;
   flex: 0 0 12%;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 .about-us__block {
   flex: 1 0;
@@ -138,7 +145,7 @@ a {
   margin: 0 auto;
 }
 
-/* ------------  FOOTER ---------------*/
+/* -----------------------------------------------  FOOTER -----------------------------------------------*/
 .footer__container {
   max-width: 1130px;
   padding: 0 15px;
@@ -157,7 +164,6 @@ footer {
 .footer_row {
   display: flex;
   align-items: center;
-  /* padding: 20px 0 10px 0; */
 }
 .footer__col40 {
   flex-basis: 40%;
@@ -217,6 +223,7 @@ footer {
 .partners {
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
 }
 .partner {
   padding: 5px;
@@ -225,7 +232,44 @@ footer {
   flex: 0 0 50%;
 }
 
-/* ------ Media -------- */
+.footer__adaptive_contacts {
+  display: none;
+  width: 100%;
+}
+.footer__adaptive_header {
+  text-align: center;
+}
+.footer__adaptive_header h5 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+.footer__adaptive_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 15px 0;
+}
+.footer__adaptive_policy {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translate(-50%, -40px);
+  white-space: nowrap;
+  font-size: 16px;
+}
+.author {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -10px);
+}
+.author a {
+  color: #ffffff40;
+  font-size: 12px;
+  font-family: 'Neucha', cursive;
+}
+
+/* -------------------------------------- Media ----------------------------------------- */
 
 @media screen and (max-width: 1100px) {
   .footer__col40 {
@@ -245,9 +289,13 @@ footer {
     font-size: 16px;
   }
 }
+
 @media screen and (max-width: 860px) {
   footer {
     height: 450px;
+  }
+  .footer__container {
+    align-items: flex-start;
   }
   .footer_row {
     flex-direction: column-reverse;
@@ -255,7 +303,45 @@ footer {
   .footer__col20 {
     display: none;
   }
+  .footer__col40.col-left {
+    display: none;
+  }
+  .partner {
+    flex: 0 0 34%;
+  }
+  .partners__header {
+    text-align: center;
+    position: initial;
+  }
+  .partners__header h5 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .condition__block {
+    position: initial;
+    bottom: 0;
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .arrow__block {
+    display: none;
+  }
+  .arrow__up {
+    display: flex;
+  }
+  .footer__adaptive_contacts {
+    display: block;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .condition__bg {
+    background-size: contain;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .main-button {
     width: 100%;
@@ -263,6 +349,12 @@ footer {
   }
   .condition-order__block h1 {
     font-size: 30px;
+  }
+  .about__card {
+    font-size: 14px;
+  }
+  .about__card_line {
+    width: 100px;
   }
 }
 
@@ -272,9 +364,16 @@ footer {
   }
   .services__header h1 {
     font-size: 30px;
+    white-space: nowrap;
   }
   .section__list ul {
     font-size: 16px;
+  }
+  .about__card_icon {
+    max-height: 35px;
+  }
+  .about__card_line {
+    width: 64px;
   }
 }
 
@@ -296,4 +395,10 @@ footer {
 }
 #section3 {
   background-image: url("../images/fourth-screen.jpg");
+}
+
+@media screen and (max-width: 700px) {
+  #section1 {
+    background-image: url("../images/second-screen.jpg");
+  }
 }

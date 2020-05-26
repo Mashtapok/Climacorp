@@ -1,8 +1,13 @@
-$(document).ready(function() {
-  $('.burger__button').on('click', function(event) {
-    $('.burger__row').toggleClass('burger__menu_active');
+let button = document.querySelector('.burger__button')
+let menu = document.querySelector('.burger__row')
+let links = document.querySelectorAll('.burger__menu_nav-item')
+
+button.addEventListener('click', () => {
+  menu.classList.toggle('burger__menu_active')
+});
+
+for (link of links) {
+  link.addEventListener('click', () => {
+    menu.classList.toggle('burger__menu_active')
   })
-  $('.burger__menu_nav-item').on('click', function(event) {
-    $('.burger__row').toggleClass('burger__menu_active');
-  })
-})
+}
