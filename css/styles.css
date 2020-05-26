@@ -52,6 +52,7 @@ a {
   color: black;
   background: white;
   border: none;
+  transform: scale(1.05);
 }
 
 /* -----------------------------------------------  Услуги -----------------------------------------------*/
@@ -71,38 +72,44 @@ a {
   height: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .condition__block {
-  position: relative;
-  bottom: 150px;
+  /* position: relative;
+  bottom: 150px; */
   display: flex;
   justify-content: center;
 }
 .condition__bg {
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
   width: 555px;
   height: 170px;
-  background: url("../images/condition.png") no-repeat;
+  background-image: url("../images/condition.png");
+  background-repeat: no-repeat;
 }
 .condition__bg:hover {
-  background: url("../images/condition-hover.png");
+  background-image: url("../images/condition-hover.png");
+  transform: scale(1.005) translateY(-5px);
 }
 .condition-order__block h1 {
   font-size: 50px;
 }
 .arrow__block {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   justify-content: center;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+.arrow__block svg {
+  transition: transform .3s;
+}
+.arrow__block svg:hover {
+transform: translateY(-5px);
 }
 .arrow__up {
   display: none;
   justify-content: center;
-  position: relative;
-  bottom: 35px;
 }
 
 /* -----------------------------------------------  О нас -----------------------------------------------*/
@@ -254,7 +261,7 @@ footer {
   bottom: 15px;
   transform: translate(-50%, -40px);
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 12px;
 }
 .author {
   position: absolute;
@@ -324,6 +331,9 @@ footer {
     justify-content: center;
     margin-top: 50px;
   }
+  .condition-order__block {
+    align-self: center;
+  }
   .arrow__block {
     display: none;
   }
@@ -350,10 +360,18 @@ footer {
     font-size: 30px;
   }
   .about__card {
-    font-size: 14px;
+    font-size: 13px;
   }
   .about__card_line {
     width: 100px;
+  }
+  .arrow__up {
+    position: relative;
+    bottom: 35px;
+  }
+  .condition-order__block {
+    position: relative;
+    top: 30px;
   }
 }
 
