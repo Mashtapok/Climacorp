@@ -3,11 +3,16 @@
 @import "header.css";
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
+html {
+  overflow-x: hidden !important;
+}
+body {
+  overflow-x: hidden !important;
+}
 html,
 body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
-  overflow-x: hidden !important;
 }
 a {
   color: #fff;
