@@ -23,9 +23,9 @@
 
             <div class="menu__body menu__left">
               <ul class="menu__list">
-                <li><a href="#" class="menu__link">Главная</a></li>
-                <li><a href="#" class="menu__link">Услуги</a></li>
-                <li><a href="#" class="menu__link">Преимущества</a></li>
+                <li><a href="#main" class="menu__link">Главная</a></li>
+                <li><a href="#services" class="menu__link">Услуги</a></li>
+                <li><a href="#about" class="menu__link">Преимущества</a></li>
               </ul>
             </div>
           </nav>
@@ -35,8 +35,8 @@
           </div>
             <div class="menu__body menu__right">
               <ul class="menu__list">
-                <li><a href="" class="menu__link">Партнёры</a></li>
-                <li><a href="" class="menu__link">Контакты</a></li>
+                <li><a href="#partners" class="menu__link">Партнёры</a></li>
+                <li><a href="#contacts" class="menu__link">Контакты</a></li>
               </ul>
             </div>
 
@@ -51,14 +51,14 @@
             <img src="images/logo.png" alt="logo">
           </div>
           <div class="burger__contacts">
-            <div class="burger-icon"><img src="images/icons/mail.png" alt=""></div>
-            <div class="burger-icon"><img src="images/icons/phone.png" alt=""></div>
+            <div class="burger-icon"><img src="images/icons/mail.png"></div>
+            <div class="burger-icon"><img src="images/icons/phone.png"></div>
           </div>
 
           <nav class="burger__menu_nav">
-            <div class="burger__menu_nav-item"><a href="#">Услуги</a></div>
-            <div class="burger__menu_nav-item"><a href="#">Преимущества</a></div>
-            <div class="burger__menu_nav-item"><a href="#">Партнёры</a></div>
+            <div class="burger__menu_nav-item"><a href="#services">Услуги</a></div>
+            <div class="burger__menu_nav-item"><a href="#about">Преимущества</a></div>
+            <div class="burger__menu_nav-item"><a href="#partners">Партнёры</a></div>
           </nav>
 
         </div>
@@ -69,7 +69,7 @@
 
     <!-- ------------------ CONTENT ------------------- -->
     <div id="fullpage">
-      <div class="section" id="section0">
+      <div class="section" id="main">
         <div class="container">
           <div class="section__header">
             <h1>
@@ -88,7 +88,7 @@
         </div>
       </div>
 <!-- ------------------  ------------------- -->
-      <div class="section" id="section1">
+      <div class="section" id="services">
         <div class="container">
           <div class="services__header"><h1>Наши услуги</h1></div>
           <div class="section__list">
@@ -138,7 +138,7 @@
         </div>
       </div>
 <!-- ------------------ ------------------- -->
-      <div class="section" id="section3">
+      <div class="section" id="about">
         <div class="container about-us_section">
           <div class="about-us__header">
             <h2>
@@ -218,7 +218,7 @@
                 <li><a href="#">Контакты</a></li>
               </ul>
             </div>
-            <div class="footer-contacts">
+            <div class="footer-contacts" id="contacts">
               <div class="contact mail"><span>Climocorp@gmail.com</span></div>
               <div class="contact phone"><span>8928323232</span></div>
               <div class="contact place">
@@ -247,7 +247,7 @@
             <div class="partners__header">
               <h5>Наши партнёры</h5>
             </div>
-            <div class="partners">
+            <div class="partners__block" id="partners">
               <div class="partner">
                 <img src="images/partners/partner1.png" />
               </div>
