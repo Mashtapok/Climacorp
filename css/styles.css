@@ -97,9 +97,14 @@ a {
   cursor: pointer;
 }
 .condition__bg:hover {
-  background-image: url("../images/condition-hover.png");
+
   -webkit-transform: scale(1.005) translateY(-5px);
   transform: scale(1.005) translateY(-5px);
+}
+@media (pointer: fine) {
+  .condition__bg:hover {
+    background-image: url("../images/condition-hover.png");
+  }
 }
 .condition-order__block h1 {
   font-size: 50px;

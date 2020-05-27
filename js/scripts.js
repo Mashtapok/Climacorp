@@ -24,29 +24,31 @@ document.addEventListener("DOMContentLoaded", () => {
   text.addEventListener("mouseout", () => {
     arrow.style.transform = "translateY(0)";
   });
-
+     
   // ----------- Кнопка "наверх"
   let goTopBtn = document.querySelector(".back_to_top");
 
-  window.addEventListener("scroll", trackScroll);
-  goTopBtn.addEventListener("click", backToTop);
-
-  function trackScroll() {
-    let scrolled = window.pageYOffset;
-    let coords = document.documentElement.clientHeight;
-
-    if (scrolled > coords) {
-      goTopBtn.classList.add("back_to_top-show");
+  if (window.matchMedia("(min-width: 760px)").matches) {
+    window.addEventListener("scroll", trackScroll);
+    goTopBtn.addEventListener("click", backToTop);
+  
+    function trackScroll() {
+      let scrolled = window.pageYOffset;
+      let coords = document.documentElement.clientHeight;
+  
+      if (scrolled > coords) {
+        goTopBtn.classList.add("back_to_top-show");
+      }
+      if (scrolled < coords) {
+        goTopBtn.classList.remove("back_to_top-show");
+      }
     }
-    if (scrolled < coords) {
-      goTopBtn.classList.remove("back_to_top-show");
+  
+    function backToTop() {
+      window.scrollBy({
+        top: -document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
     }
-  }
-
-  function backToTop() {
-    window.scrollBy({
-      top: -document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
   }
 });
