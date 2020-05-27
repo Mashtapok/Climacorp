@@ -443,3 +443,7 @@ footer {
     background-image: url("../images/second-screen.jpg");
   }
 }
+.preload_image {
+  background-image: url("../images/condition-hover.png");
+  display: none;
+}
