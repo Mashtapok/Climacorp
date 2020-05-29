@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if(event.target.alt === "close") {
       modalContanier.style.display = "none";
       unBlockScroll();
-    }s
+    }
     if (modalContanier === event.target) {
       modalContanier.style.display = "none";
       unBlockScroll();
