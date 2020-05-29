@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let menu = document.querySelector(".burger__row");
   let links = document.querySelectorAll(".burger__menu_nav-item");
 
-  let mainButton = document.getElementById('mainButton')
-  let modalContanier = document.querySelector('.modal-container')
-
   button.addEventListener("click", () => {
     menu.classList.toggle("burger__menu_active");
   });
@@ -111,26 +108,51 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   })();
 
-  // ---------- Прокрутка к анкорам
+  // ---------- Основное модальное
+  let mainButton = document.getElementById("mainButton");
+  let modalContanier = document.querySelector(".modal-container");
 
-  // $('#mainButton').click(() => {
-  //   $('.modal-container').css('display' , 'flex')
-  // })
-  // $('.modal-container').click(function (e) {
-  //   if(this === event.target) {
-  //   $('.modal-container').css('display' , 'none')
-  //   }
-  // });
+  function blockScroll() {
+    document.documentElement.style.overflowY = "hidden";
+  }
+  function unBlockScroll() {
+    document.documentElement.style.overflowY = "initial";
+  }
 
-  mainButton.addEventListener('click', () => {
-    modalContanier.style.display = "block"
-    document.documentElement.style.overflowY = "hidden"
-  })
-  modalContanier.addEventListener('click', (event) => {
-    if(modalContanier === event.target) {
-      modalContanier.style.display = "none"
-      document.documentElement.style.overflowY = "initial"
+  mainButton.addEventListener("click", () => {
+    modalContanier.style.display = "block";
+    blockScroll()
+  });
+  modalContanier.addEventListener("click", (event) => {
+    if(event.target.alt === "close") {
+      modalContanier.style.display = "none";
+      unBlockScroll();
+    }s
+    if (modalContanier === event.target) {
+      modalContanier.style.display = "none";
+      unBlockScroll();
     }
-  })
+  });
+
+
+  // ---------- Популярные модели модальное
+  let conditionButton = document.querySelector(".condition__bg");
+  let popularModalContanier = document.querySelector(".popular-modal-container");
+
+  conditionButton.addEventListener("click", () => {
+    popularModalContanier.style.display = "block";
+    blockScroll()
+  });
+  popularModalContanier.addEventListener("click", (event) => {
+    if(event.target.alt === "close") {
+      popularModalContanier.style.display = "none";
+      unBlockScroll();
+    }
+    if (popularModalContanier === event.target) {
+      popularModalContanier.style.display = "none";
+      unBlockScroll();
+    }
+  });
+
 
 });
