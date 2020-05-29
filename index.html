@@ -84,9 +84,11 @@
               <li>Обслуживание</li>
             </ul>
           </div>
-          <div class="button__block"><button class="main-button">Сделать заказ</button></div>
+          <div class="button__block"><button class="main-button" id="mainButton">Сделать заказ</button></div>
         </div>
       </div>
+
+      
 <!-- ------------------  ------------------- -->
       <div class="section" id="services">
         <div class="container">
@@ -282,10 +284,87 @@
     </footer>
 
     <a class="back_to_top" title="Наверх">&uarr;</a>
+
+<!-- Главная заявка -->
+<div class="modal-container" tabindex="-1" role="dialog">
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-col-8">
+        <form action="#" id="main-form">
+          <div class="main-form-header">
+            <h2>Оставить заявку</h2>
+          </div>
+          <div class="main-form-container">
+            <div class="main-form-row">
+              <div class="main-form-name__block">
+                <div class="main-formControl">
+                  <label for="main-form-name">Ваше имя</label>
+                  <input name="main-form-name" type="text" placeholder="Введите имя">
+                </div>
+              </div>
+              <div class="main-form-lastname__block">
+                <div class="main-formControl">
+                  <label for="main-form-lastname">Ваша фамилия</label>
+                  <input type="text" placeholder="Введите фамилию">
+                </div>
+              </div>
+            </div>
+            <div class="main-form-square__block">
+              <div class="main-formControl">
+                <label for="main-form-square">Площадь помещения</label>
+                <input type="text" placeholder="Квадратные метры">
+              </div>
+            </div>
+            <div class="main-form-phone__block">
+              <div class="main-formControl">
+                <label for="main-form-phone">Номер телефона</label>
+                <input type="text" placeholder="Введите номер">
+              </div>
+            </div>
+            <div class="main-form-submit__block">
+              <button type="submit" id="main-form-submitButton">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-col-4">
+        <div class="main-form-contacts">
+          <div class="main-form-contacts-header">
+            <h2>Наши контакты</h2>
+          </div>
+
+          <div class="main-form-contacts-container">
+            <div class="main-form-contact__block">
+              <p class="small-label">E-mail:</p>
+              <p class="main-form-contact-text">climocorp@mail.ru</p>
+            </div>
+            <div class="main-form-contact__block">
+              <p class="small-label">Номер телефона:</p>
+              <p class="main-form-contact-text">89232323514</p>
+            </div>
+            <div class="main-form-contact__block">
+              <p class="small-label">Адрес компании:</p>
+              <p class="main-form-contact-text">Санкт-Петербург, ул.Ворошилова, д.2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p>Отправляя форму, я соглашаюсь с <a href="#">политикой</a>
+        обратки персональных данных</p>
+    </div>
+  </div>
+</div>
+<!-- Главная заявка -->
+
     </div>
 
     <script type="text/javascript" src="js/fullpage.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
     <script type="text/javascript">
       new fullpage("#fullpage", {
         //options

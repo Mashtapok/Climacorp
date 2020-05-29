@@ -1,0 +1,220 @@
+.modal-container {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-tap-highlight-color: transparent;
+}
+.modal {
+  top: 50%;
+  left: 50%;
+  width: auto;
+  border: none;
+  height: auto;
+  outline: none;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  background-image: -moz-linear-gradient(
+    180deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    180deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  background-image: -ms-linear-gradient(
+    180deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.5);
+}
+.modal-content {
+  display: flex;
+}
+.modal-col-8 {
+  flex: 1 1 66.6667%;
+  padding-right: 20px;
+}
+.modal-col-4 {
+  flex: 1 1 33.333%;
+}
+#main-form {
+  padding: 15px;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: dashed;
+  border-radius: 40px;
+}
+.main-form-header {
+  text-align: center;
+}
+.main-form-container {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+}
+.main-form-row {
+  display: flex;
+  margin: 10px 0;
+}
+.main-form-name__block {
+  flex: 1 1 50%;
+  margin-right: 15px;
+}
+.main-form-lastname__block {
+  flex: 1 1 50%;
+}
+.main-form-square__block {
+  margin-bottom: 10px;
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-form-phone__block {
+  margin-bottom: 10px;
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-form-submit__block {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-formControl input {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 40px;
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+}
+.main-formControl label {
+  margin-bottom: 5px;
+}
+.main-formControl input::placeholder {
+  font-weight: 300;
+  color: #ffffffb6;
+  font-size: 14px;
+}
+.main-formControl {
+  display: inline-block;
+}
+.main-formControl label {
+  display: block;
+  text-align: center;
+}
+.main-formControl input::placeholder {
+  color: rgb(192, 192, 192);
+}
+
+#main-form-submitButton {
+  width: 65%;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 40px;
+  background-image: -moz-linear-gradient(
+    1deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    1deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  background-image: -ms-linear-gradient(
+    1deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0.63px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s;
+}
+.modal-footer {
+  margin: 15px 30px 0 30px;
+  font-size: 9px;
+  font-weight: 300;
+  color: #ffffffb6;
+}
+#main-form-submitButton:hover {
+  box-shadow: 0px 0px 10px 0.63px rgba(255, 255, 255, 0.6);
+}
+
+/* --------------------------- Поле контактов --------------------------- */
+.main-form-contacts {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 15px;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: dashed;
+  border-radius: 40px;
+}
+.main-form-contacts-header {
+  text-align: center;
+}
+.small-label {
+  color: #ffffffb6;
+  font-weight: 300;
+  font-size: 10px;
+}
+.main-form-contact-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+.main-form-contacts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1 1 auto;
+}
+
+/* --------------------------- Медиа запроса --------------------------- */
+@media screen and (max-width: 760px) {
+  .modal-col-4 {
+    display: none;
+  }
+  .modal-col-8 {
+    padding-right: 0;
+  }
+  .main-form-row {
+    flex-direction: column;
+  }
+  .main-form-name__block {
+    margin-right: 0;
+  }
+  #main-form-submitButton {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .modal {
+    width: 100%;
+  }
+  .main-formControl input {
+    width: 100%;
+  }
+}
