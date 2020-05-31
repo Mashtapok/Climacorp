@@ -453,12 +453,17 @@ footer {
 
 .arrow__block svg {
   animation-name: arrow;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
 .arrow__up img {
   animation-name: arrow;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.condition__bg {
+  animation-name: condition_hover;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
 
@@ -472,5 +477,19 @@ footer {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes condition_hover {
+  0% {
+    background-image: url("../images/condition.png");
+  }
+  50% {
+    background-image: url("../images/condition-hover.png");
+    /* -webkit-transform: scale(1.005) translateY(-5px);
+  transform: scale(1.005) translateY(-5px); */
+  }
+  100% {
+    background-image: url("../images/condition.png");
   }
 }
