@@ -219,11 +219,11 @@ footer {
   align-items: center;
 }
 .contact.mail span:before {
-  content: url("/images/icons/mail.png");
+  content: url("../images/icons/mail.png");
   padding-right: 20px;
 }
 .contact.phone span:before {
-  content: url("/images/icons/phone.png");
+  content: url("../images/icons/phone.png");
   padding-right: 20px;
 }
 .contact.place span:before {

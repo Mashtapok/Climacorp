@@ -65,6 +65,11 @@
   left: 0;
   transition: all 250ms;
 }
+.burger__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .burger__logo img {
   max-height: 70px;
 }
@@ -191,7 +196,7 @@
     rgb(99, 110, 128) 0%,
     rgb(51, 37, 47) 100%
   );
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 .menu__contacts_contact-active {
   z-index: 3;
