@@ -103,6 +103,10 @@
   padding: 7px 10px;
   text-align: center;
 }
+.main-formControl input:focus {
+  box-shadow: 0 0 5px 2.5px rgba(239, 239, 239, 0.5);
+}
+
 .main-formControl label {
   margin-bottom: 5px;
 }
@@ -255,4 +259,12 @@
     top: 5px;
     right: 5px;
   }
+}
+
+.modal {
+transform: translate(-50%, -50%);
+transition: transform .3s ease-in-out;
+}
+.modal.modal-active {
+  transform: translate(-50%, -200%);
 }

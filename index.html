@@ -40,6 +40,22 @@
               </ul>
             </div>
 
+            <div class="menu__contacts">
+
+              <div class="menu__contacts__row">
+                <img src="images/icons/mail.png" alt="mail">
+                <p class="menu__contacts_contact" id="menu__contacts_mail">Climocorp@mail.ru</p>
+              </div>
+              <div class="menu__contacts__row">
+                <img src="images/icons/phone.png" alt="phone">
+                <p class="menu__contacts_contact" id="menu__contacts_phone">+79053543240</p>
+              </div>
+              <div class="menu__contacts__row">
+                <img src="images/icons/place.png" alt="place">
+                <p class="menu__contacts_contact" id="menu__contacts_place">Санкт-Петербург, ул.Ворошилова д2</p>
+              </div>
+            </div>
+
         </div>
 
         
@@ -194,7 +210,7 @@
             </div>
             <div class="about__row-third">
               <div class="about__card">
-                <img class="about__card_icon" src="images/service.png" />
+                <img class="about__card_icon" src="images/materials.png" />
                 <img class="about__card_line" src="images/line.png" />
                 <p>
                   Качественные<br />
@@ -214,10 +230,10 @@
           <div class="footer__col40 col-left">
             <div class="footer-menu">
               <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Преимущества</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#main">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#about">Преимущества</a></li>
+                <li><a href="#contacts">Контакты</a></li>
               </ul>
             </div>
             <div class="footer-contacts" id="contacts">
@@ -233,9 +249,9 @@
 <h5>Контакты</h5>
   </div>
   <div class="footer__adaptive_main">
-    <span><img src="images/icons/mail.png"></span>
-    <span><img src="images/icons/place.png"></span>
-    <span><img src="images/icons/phone.png"></span>
+    <span><img src="images/icons/mail.png" alt="mail"></span>
+    <span><img src="images/icons/place.png" alt="place"></span>
+    <span><img src="images/icons/phone.png" alt="phone"></span>
   </div>
   <div class="footer__adaptive_policy">
     <a href="">Политика конфиденциальности</a>
@@ -254,22 +270,22 @@
                 <img src="images/partners/partner1.png" />
               </div>
               <div class="partner">
-                <img src="images/partners/partner2.png" alt="" />
+                <img src="images/partners/partner2.png" alt="kentatsu" />
               </div>
               <div class="partner">
-                <img src="images/partners/partner3.png" alt="" />
+                <img src="images/partners/partner3.png" alt="quattrloclimo" />
               </div>
               <div class="partner">
-                <img src="images/partners/partner4.png" alt="" />
+                <img src="images/partners/partner4.png" alt="lessar" />
               </div>
               <div class="partner">
-                <img src="images/partners/partner5.png" alt="" />
+                <img src="images/partners/partner5.png" alt="systemair" />
               </div>
               <div class="partner">
-                <img src="images/partners/partner6.png" alt="" />
+                <img src="images/partners/partner6.png" alt="fujitsu" />
               </div>
               <div class="partner">
-                <img src="images/partners/partner7.png" alt="" />
+                <img src="images/partners/partner7.png" alt="midea" />
               </div>
               <div class="partner">
                 <img src="images/partners/partner8.png" alt="" />
@@ -288,9 +304,9 @@
 <!----- Главная заявка ----->
 <div class="modal-container" tabindex="-1">
 
-  <div class="modal-close"><img src="images/icons/krest.png" alt="close" title="Закрыть"></div>
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
 
-  <div class="modal">
+  <div class="modal modal-active">
     <div class="modal-content">
       <div class="modal-col-8">
         <form action="#" id="main-form">
@@ -308,20 +324,20 @@
               <div class="main-form-lastname__block">
                 <div class="main-formControl">
                   <label for="main-form-lastname">Ваша фамилия</label>
-                  <input type="text" placeholder="Введите фамилию">
+                  <input name="main-form-lastname" type="text" placeholder="Введите фамилию">
                 </div>
               </div>
             </div>
             <div class="main-form-square__block">
               <div class="main-formControl">
                 <label for="main-form-square">Площадь помещения</label>
-                <input type="text" placeholder="Квадратные метры">
+                <input name="main-form-square" type="number" placeholder="Квадратные метры">
               </div>
             </div>
             <div class="main-form-phone__block">
               <div class="main-formControl">
                 <label for="main-form-phone">Номер телефона</label>
-                <input type="text" placeholder="Введите номер">
+                <input name="main-form-phone" id="main-form-phone" type="tel" placeholder="Введите номер">
               </div>
             </div>
             <div class="main-form-submit__block">
@@ -355,7 +371,7 @@
     </div>
     <div class="modal-footer">
       <p>Отправляя форму, я соглашаюсь с <a href="#">политикой</a>
-        обратки персональных данных</p>
+        обработки персональных данных</p>
     </div>
   </div>
 </div>
@@ -363,7 +379,7 @@
 
 <!---- Популярные модели ---->
 <div class="modal-container popular-modal-container" tabindex="-1">
-  <div class="popular-modal-close"><img src="images/icons/krest.png" alt="close" title="Закрыть"></div>
+  <div class="popular-modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
   <div class="popular-modal">
 
     <div class="popular-modal-content">
@@ -422,6 +438,40 @@
   </div>
 </div>
 <!-- Популярные модели -->
+
+<!---- Заказать популярную модель ---->
+<div class="modal-container order-modal-container" tabindex="-1">
+  <div class="order-modal">
+
+    <div class="order-modal-content">
+
+      <div class="order-modal-body">
+          <form action="#" id="order-form">
+            <div class="order-form-name__block">
+              <div class="main-formControl">
+                <label for="order-form-name">Ваше имя</label>
+                <input name="order-form-name" type="text" placeholder="Введите имя">
+              </div>
+            </div>
+          <div class="order-form-phone__block">
+            <div class="main-formControl">
+              <label for="order-form-phone">Номер телефона</label>
+              <input name="order-form-phone" id="main-form-phone" type="tel" placeholder="Введите номер">
+            </div>
+          </div>
+          <div class="main-form-submit__block">
+            <button type="submit" id="order-form-submitButton">Отправить</button>
+          </div>
+          </form>
+          <div class="order-modal-footer">
+            <p>Отправляя форму, я соглашаюсь с <a href="#">политикой</a>
+              обработки персональных данных</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Заказать популярную модель -->
 
     </div>
 

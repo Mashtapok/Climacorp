@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------- Основное модальное
   let mainButton = document.getElementById("mainButton");
   let modalContanier = document.querySelector(".modal-container");
+  let modal = document.querySelector(".modal")
 
   function blockScroll() {
     document.documentElement.style.overflowY = "hidden";
@@ -121,16 +122,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mainButton.addEventListener("click", () => {
     modalContanier.style.display = "block";
+    setTimeout(()=> {
+      modal.classList.remove('modal-active')
+    }, 10)
+
     blockScroll()
   });
   modalContanier.addEventListener("click", (event) => {
     if(event.target.alt === "close") {
       modalContanier.style.display = "none";
       unBlockScroll();
+      modal.classList.add('modal-active')
     }
     if (modalContanier === event.target) {
       modalContanier.style.display = "none";
       unBlockScroll();
+      modal.classList.add('modal-active')
     }
   });
 
@@ -155,4 +162,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  // ---------- Заказать модель модальное
+  let orderButtons = document.querySelector(".popular-modal-body")
+  let orderModalContanier = document.querySelector(".order-modal-container")
+
+  orderButtons.addEventListener("click", (event) => {
+    if(event.target.className === "popular-modal-card-orderBtn") {
+      orderModalContanier.style.display = "block"
+    blockScroll()
+    }
+  });
+  orderModalContanier.addEventListener("click", (event) => {
+    if (orderModalContanier === event.target) {
+      orderModalContanier.style.display = "none"
+    }
+  });
+
+
+
+  // ---------- Всплывашки на контактах
+  let contacts = document.querySelector('.menu__contacts')
+  let menuContact = contacts.querySelector('.menu__contacts_contact')
+
+  contacts.addEventListener('click', (event) => {
+    if(event.target.alt === "mail" || event.target.id === "menu__contacts_mail") {
+      let mail = contacts.querySelector('#menu__contacts_mail')
+      mail.classList.toggle('menu__contacts_contact-active')
+    }
+    if(event.target.alt === "phone" || event.target.id === "menu__contacts_phone") {
+      let phone = contacts.querySelector('#menu__contacts_phone')
+      phone.classList.toggle('menu__contacts_contact-active')
+    }
+    if(event.target.alt === "place" || event.target.id === "menu__contacts_place") {
+      let place = contacts.querySelector('#menu__contacts_place')
+      place.classList.toggle('menu__contacts_contact-active')
+    }
+  })
 });
