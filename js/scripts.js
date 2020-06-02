@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----------- Hover стрелки
-  let arrow = document.getElementById("arrow-upRight");
-  let text = document.getElementById("order-now");
+  // let arrow = document.getElementById("arrow-upRight");
+  // let text = document.getElementById("order-now");
 
-  text.addEventListener("mouseover", () => {
-    arrow.style.transform = "translateY(-5px)";
-  });
-  text.addEventListener("mouseout", () => {
-    arrow.style.transform = "translateY(0)";
-  });
+  // text.addEventListener("mouseover", () => {
+  //   arrow.style.transform = "translateY(-5px)";
+  // });
+  // text.addEventListener("mouseout", () => {
+  //   arrow.style.transform = "translateY(0)";
+  // });
 
   // ----------- Кнопка "наверх"
   let goTopBtn = document.querySelector(".back_to_top");
@@ -108,79 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   })();
 
-  // ---------- Основное модальное
-  let mainButton = document.getElementById("mainButton");
-  let modalContanier = document.querySelector(".modal-container");
-  let modal = document.querySelector(".modal")
-
-  function blockScroll() {
-    document.documentElement.style.overflowY = "hidden";
-  }
-  function unBlockScroll() {
-    document.documentElement.style.overflowY = "initial";
-  }
-
-  mainButton.addEventListener("click", () => {
-    modalContanier.style.display = "block";
-    setTimeout(()=> {
-      modal.classList.remove('modal-active')
-    }, 10)
-
-    blockScroll()
-  });
-  modalContanier.addEventListener("click", (event) => {
-    if(event.target.alt === "close") {
-      modalContanier.style.display = "none";
-      unBlockScroll();
-      modal.classList.add('modal-active')
-    }
-    if (modalContanier === event.target) {
-      modalContanier.style.display = "none";
-      unBlockScroll();
-      modal.classList.add('modal-active')
-    }
-  });
-
-
-  // ---------- Популярные модели модальное
-  let conditionButton = document.querySelector(".condition__bg");
-  let popularModalContanier = document.querySelector(".popular-modal-container");
-
-  conditionButton.addEventListener("click", () => {
-    popularModalContanier.style.display = "block";
-    blockScroll()
-  });
-  popularModalContanier.addEventListener("click", (event) => {
-    if(event.target.alt === "close") {
-      popularModalContanier.style.display = "none";
-      unBlockScroll();
-    }
-    if (popularModalContanier === event.target) {
-      popularModalContanier.style.display = "none";
-      unBlockScroll();
-    }
-  });
-
-
-  // ---------- Заказать модель модальное
-  let orderButtons = document.querySelector(".popular-modal-body")
-  let orderModalContanier = document.querySelector(".order-modal-container")
-
-  orderButtons.addEventListener("click", (event) => {
-    if(event.target.className === "popular-modal-card-orderBtn") {
-      orderModalContanier.style.display = "block"
-    blockScroll()
-    }
-  });
-  orderModalContanier.addEventListener("click", (event) => {
-    if (orderModalContanier === event.target) {
-      orderModalContanier.style.display = "none"
-    }
-  });
-
-
-
-  // ---------- Всплывашки на контактах
+  // ---------- Всплывашки на контактах(header)
   let contacts = document.querySelector('.menu__contacts')
   let menuContact = contacts.querySelector('.menu__contacts_contact')
 

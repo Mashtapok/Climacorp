@@ -1,0 +1,94 @@
+.contacts-modal-container {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-tap-highlight-color: transparent;
+}
+.contacts-modal {
+  top: 50%;
+  left: 50%;
+  width: auto;
+  border: none;
+  height: 60%;
+  outline: none;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  background-image: -moz-linear-gradient(
+    180deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    180deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  background-image: -ms-linear-gradient(
+    180deg,
+    rgb(99, 110, 128) 0%,
+    rgb(51, 37, 47) 100%
+  );
+  box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.5);
+}
+.contacts-modal-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contacts-modal-header {
+  text-align: center;
+  font-size: 24px;
+}
+.contacts-modal-label {
+  color: #ffffffb6;
+  font-weight: 300;
+  font-size: 18px;
+}
+.modal-contacts-text {
+  font-weight: bold;
+  font-size: 24px;
+}
+.modal-contacts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1 1 auto;
+}
+.modal-contacts__block {
+}
+@media screen and (max-width: 650px) {
+  .contacts-modal {
+    width: 90%;
+  }
+}
+
+@media screen and (max-height: 690px) and (max-width: 350px) {
+  .contacts-modal {
+    height: auto;
+  }
+  .contacts-modal-header {
+    font-size: 18px;
+  }
+  .modal-contacts-text {
+    font-weight: bold;
+    font-size: 19px;
+  }
+  .contacts-modal-label {
+    font-size: 16px;
+  }
+  .modal-contacts__block {
+    padding: 10px 0;
+  }
+}

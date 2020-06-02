@@ -67,8 +67,8 @@
             <img src="images/logo.png" alt="logo">
           </div>
           <div class="burger__contacts">
-            <div class="burger-icon"><img src="images/icons/mail.png"></div>
-            <div class="burger-icon"><img src="images/icons/phone.png"></div>
+            <div class="burger-icon contactButtons"><img src="images/icons/mail.png"></div>
+            <div class="burger-icon contactButtons"><img src="images/icons/phone.png"></div>
           </div>
 
           <nav class="burger__menu_nav">
@@ -169,7 +169,7 @@
               <div class="about__card">
                 <img class="about__card_icon" src="images/five-years.png" />
                 <img class="about__card_line" src="images/line.png" />
-                <p>Опыт работы</p>
+                <p>Лет <br/>Опыт работы</p>
               </div>
               <div class="about__card">
                 <img class="about__card_icon" src="images/trash.png" />
@@ -249,9 +249,9 @@
 <h5>Контакты</h5>
   </div>
   <div class="footer__adaptive_main">
-    <span><img src="images/icons/mail.png" alt="mail"></span>
-    <span><img src="images/icons/place.png" alt="place"></span>
-    <span><img src="images/icons/phone.png" alt="phone"></span>
+    <span class="contactButtons"><img src="images/icons/mail.png" alt="mail"></span>
+    <span class="contactButtons"><img src="images/icons/place.png" alt="place"></span>
+    <span class="contactButtons"><img src="images/icons/phone.png" alt="phone"></span>
   </div>
   <div class="footer__adaptive_policy">
     <a href="privacy-policy.html">Политика конфиденциальности</a>
@@ -473,13 +473,42 @@
 </div>
 <!-- Заказать популярную модель -->
 
+<!---- Контакты модальное окно ---->
+<div class="contacts-modal-container" tabindex="-1">
+
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
+
+  <div class="contacts-modal">
+    <div class="contacts-modal-content">
+          <div class="contacts-modal-header">
+            <h2>Наши контакты</h2>
+          </div>
+
+          <div class="modal-contacts-container">
+            <div class="modal-contacts__block">
+              <p class="contacts-modal-label">E-mail:</p>
+              <p class="modal-contacts-text">climocorp@mail.ru</p>
+            </div>
+            <div class="modal-contacts__block">
+              <p class="contacts-modal-label">Номер телефона:</p>
+              <p class="modal-contacts-text">+7 921 592-05-76</p>
+            </div>
+            <div class="modal-contacts__block">
+              <p class="contacts-modal-label">Адрес компании:</p>
+              <p class="modal-contacts-text">Санкт-Петербург, ул.Ворошилова, д.2</p>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<!---- Контакты модальное окно ---->
+
+
     </div>
 
     <script type="text/javascript" src="js/fullpage.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-    crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="js/modals.js"></script>
     <script type="text/javascript">
       new fullpage("#fullpage", {
         //options

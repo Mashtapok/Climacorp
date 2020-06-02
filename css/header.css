@@ -93,7 +93,7 @@
 }
 .burger__menu_nav {
   position: absolute;
-  width: 90%;
+  width: 91%;
   left: 100%;
   top: 0;
   height: 70px;
@@ -229,13 +229,6 @@
 }
 
 @media screen and (max-width: 860px) {
-  .header {
-    position: absolute;
-    width: 100%;
-    background-color: black;
-    top: 0;
-    padding: 10px 0;
-  }
   .header__logo {
     max-width: 75px;
     margin-top: 25px;
@@ -249,6 +242,13 @@
 }
 
 @media screen and (max-width: 760px) {
+  .header {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    padding: 10px 0;
+  }
   .header__container {
     max-width: 1130px;
     padding: 0;
