@@ -92,3 +92,10 @@
     padding: 10px 0;
   }
 }
+@media screen and (max-height: 680px) {
+  .contacts-modal {
+    overflow-y: scroll;
+    height: 90%;
+    max-height: 95%;
+  }
+}

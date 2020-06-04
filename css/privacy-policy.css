@@ -29,3 +29,8 @@ a {
 .header {
   text-align: center;
 }
+@media screen and (max-width:400px) {
+  body {
+    font-size: 13px;
+  }
+}

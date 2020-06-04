@@ -111,12 +111,12 @@
           <div class="services__header"><h1>Наши услуги</h1></div>
           <div class="section__list">
             <ul>
-              <li>Установка кондиционеров</li>
-              <li>Закладка коммуникаций под кондиционер</li>
-              <li>Сервисное обслуживание</li>
-              <li>Заправка и дозаправка системы</li>
-              <li>Перенос и демонтаж</li>
-              <li>Ремонт</li>
+              <li id="settingConditioner"><span class="services__list-item">Установка кондиционеров</span></li>
+              <li id="communication"><span class="services__list-item">Закладка коммуникаций под кондиционер</span></li>
+              <li id="services-modal-trigger"><span class="services__list-item">Сервисное обслуживание</span></li>
+              <li id="refueling"><span class="services__list-item">Заправка и дозаправка системы</span></li>
+              <li id="transfer"><span class="services__list-item">Перенос и демонтаж</span></li>
+              <li id="repair"><span class="services__list-item">Ремонт</span></li>
             </ul>
           </div>
         </div>
@@ -237,10 +237,10 @@
               </ul>
             </div>
             <div class="footer-contacts" id="contacts">
-              <div class="contact mail"><span>Climocorp@gmail.com</span></div>
-              <div class="contact phone"><span>8928323232</span></div>
+              <div class="contact mail"><span><a href="mailto:Climocorp@gmail.com">Climocorp@gmail.com</a></span></div>
+              <div class="contact phone"><span><a href="tel:+79283360922">8928323232</a></span></div>
               <div class="contact place">
-                <span>Санкт-Петербург<br> ул.Ворошилова, д.2</span>
+                <span><a href="https://goo.gl/maps/WECpNa6AnFYf2RCi9">Санкт-Петербург<br> ул.Ворошилова, д.2</a></span>
               </div>
             </div>
           </div>
@@ -309,7 +309,7 @@
   <div class="modal modal-active">
     <div class="modal-content">
       <div class="modal-col-8">
-        <form action="#" id="main-form">
+        <form action="telegram.php" method="POST" id="main-form">
           <div class="main-form-header">
             <h2>Оставить заявку</h2>
           </div>
@@ -375,7 +375,7 @@
     </div>
   </div>
 </div>
-<!--- Главная заявка --->
+<!---------------------->
 
 <!---- Популярные модели ---->
 <div class="modal-container popular-modal-container" tabindex="-1">
@@ -437,7 +437,7 @@
     </div>
   </div>
 </div>
-<!-- Популярные модели -->
+<!------------------->
 
 <!---- Заказать популярную модель ---->
 <div class="modal-container order-modal-container" tabindex="-1">
@@ -471,7 +471,7 @@
     </div>
   </div>
 </div>
-<!-- Заказать популярную модель -->
+<!------------------------ -->
 
 <!---- Контакты модальное окно ---->
 <div class="contacts-modal-container" tabindex="-1">
@@ -501,7 +501,404 @@
     </div>
   </div>
 </div>
-<!---- Контакты модальное окно ---->
+<!------------------------ ---->
+
+<!------------------------------------------------ Установка кондиционеров модальное ---->
+<div class="services-modal-container" tabindex="-1">
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
+  <div class="services-modal">
+
+    <div class="services-modal-content">
+      <div class="services-modal-body">
+          <div class="services-modal-header">
+            <h2>Выберите тип <br> кондиционера:</h2>
+          </div>
+
+          <form action="#" id="installationConditioner">
+              <div class="conditioners__list">
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="onWall">
+                    <label for="onWall">Настенный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="multisplit">
+                    <label for="multisplit">Мультисплит система</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="cassette">
+                    <label for="cassette">Кассетный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="floor">
+                    <label for="floor">Напольно-потолочный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="canal">
+                    <label for="canal">Канальный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="vrv">
+                    <label for="vrv">VRV системы</label>
+                  </div>
+              </div>
+              
+              <div class="input-group">
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="number" 
+                    placeholder="Площадь помещения">
+                  </div>
+                </div>
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="text" placeholder="Количество">
+                  </div>
+                </div>
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="number" placeholder="Номер телефона">
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-form-submit__block">
+                <button type="submit" id="order-form-submitButton">Отправить заявку</button>
+              </div>
+          </form>
+          
+      </div>
+
+      <div class="order-modal-footer">
+        <p>Отправляя форму, я соглашаюсь с <a href="privacy-policy.html">политикой</a>
+          обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------ ---->
+
+<!---- Закладка коммуникаций модальное ---->
+<div class="services-modal-container" tabindex="-1">
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
+  <div class="services-modal">
+
+    <div class="services-modal-content">
+      <div class="services-modal-body">
+          <div class="services-modal-header">
+            <h2>Выберите тип <br> кондиционера:</h2>
+          </div>
+
+          <form action="#" id="installationConditioner">
+              <div class="conditioners__list">
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="onWall">
+                    <label for="onWall">Настенный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="multisplit">
+                    <label for="multisplit">Мультисплит система</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="cassette">
+                    <label for="cassette">Кассетный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="floor">
+                    <label for="floor">Напольно-потолочный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="canal">
+                    <label for="canal">Канальный</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="vrv">
+                    <label for="vrv">VRV системы</label>
+                  </div>
+              </div>
+              
+              <div class="input-group">
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="number" placeholder="Длина трассы в метрах">
+                  </div>
+                </div>
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="tel" placeholder="Номер телефона">
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-form-submit__block">
+                <button type="submit" id="order-form-submitButton">Отправить заявку</button>
+              </div>
+          </form>
+          
+      </div>
+
+      <div class="order-modal-footer">
+        <p>Отправляя форму, я соглашаюсь с <a href="privacy-policy.html">политикой</a>
+          обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------ ---->
+
+<!---- Обслуживание модальное ---->
+<div class="services-modal-container" tabindex="-1">
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
+  <div class="services-modal">
+
+    <div class="services-modal-content">
+      <div class="services-modal-body">
+          <div class="services-modal-header">
+            <h2>Выберите тип <br> обслуживания:</h2>
+          </div>
+
+          <form action="#" id="installationConditioner">
+              <div class="conditioners__list">
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="onWall">
+                    <label for="onWall">Чистка блоков</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="multisplit">
+                    <label for="multisplit">Чистка дренажной системы</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="cassette">
+                    <label for="cassette">Проверка и дозаправка фриона</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="floor">
+                    <label for="floor">Диагностика режимов</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="canal">
+                    <label for="canal">Проверка электрических соединений</label>
+                  </div>
+              </div>
+              
+              <div class="input-group">
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="text" placeholder="Фирма кондиционера">
+                  </div>
+                </div>
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="tel" placeholder="Номер телефона">
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-form-submit__block">
+                <button type="submit" id="order-form-submitButton">Отправить заявку</button>
+              </div>
+          </form>
+          
+      </div>
+
+      <div class="order-modal-footer">
+        <p>Отправляя форму, я соглашаюсь с <a href="privacy-policy.html">политикой</a>
+          обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------ ---->
+
+<!---- Заправка и дозаправка модальное ---->
+<div class="services-modal-container" tabindex="-1">
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
+  <div class="services-modal">
+
+    <div class="services-modal-content">
+      <div class="services-modal-body">
+          <div class="services-modal-header">
+            <h2>Выберите тип <br> кондиционера:</h2>
+          </div>
+
+          <form action="#" id="installationConditioner">
+            <div class="conditioners__list">
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="onWall">
+                  <label for="onWall">Настенный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="multisplit">
+                  <label for="multisplit">Мультисплит система</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="cassette">
+                  <label for="cassette">Кассетный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="floor">
+                  <label for="floor">Напольно-потолочный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="canal">
+                  <label for="canal">Канальный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="vrv">
+                  <label for="vrv">VRV системы</label>
+                </div>
+            </div>
+            
+            <div class="input-group">
+              <div class="services-form__block">
+                <div class="services-form-formControl">
+                  <input name="order-form-phone" id="main-form-phone" type="number" placeholder="Номер телефона">
+                </div>
+              </div>
+            </div>
+
+            <div class="main-form-submit__block">
+              <button type="submit" id="order-form-submitButton">Отправить заявку</button>
+            </div>
+        </form>
+          
+      </div>
+
+      <div class="order-modal-footer">
+        <p>Отправляя форму, я соглашаюсь с <a href="privacy-policy.html">политикой</a>
+          обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------ ---->
+
+
+<!---- Перенос и демонтаж модальное ---->
+<div class="services-modal-container" tabindex="-1">
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
+  <div class="services-modal">
+
+    <div class="services-modal-content">
+      <div class="services-modal-body">
+          <div class="services-modal-header">
+            <h2>Выберите тип <br> кондиционера:</h2>
+          </div>
+
+          <form action="#" id="installationConditioner">
+            <div class="conditioners__list">
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="onWall">
+                  <label for="onWall">Настенный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="multisplit">
+                  <label for="multisplit">Мультисплит система</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="cassette">
+                  <label for="cassette">Кассетный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="floor">
+                  <label for="floor">Напольно-потолочный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="canal">
+                  <label for="canal">Канальный</label>
+                </div>
+                <div class="conditioners__list-row">
+                  <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="vrv">
+                  <label for="vrv">VRV системы</label>
+                </div>
+            </div>
+            
+            <div class="input-group">
+              <div class="services-form__block">
+                <div class="services-form-formControl">
+                  <input name="order-form-phone" id="main-form-phone" type="number" placeholder="Номер телефона">
+                </div>
+              </div>
+            </div>
+
+            <div class="main-form-submit__block">
+              <button type="submit" id="order-form-submitButton">Отправить заявку</button>
+            </div>
+        </form>
+          
+      </div>
+
+      <div class="order-modal-footer">
+        <p>Отправляя форму, я соглашаюсь с <a href="privacy-policy.html">политикой</a>
+          обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------ ---->
+
+<!---- Обслуживание модальное ---->
+<div class="services-modal-container" tabindex="-1">
+  <div class="modal-close"><img src="images/icons/close.png" alt="close" title="Закрыть"></div>
+  <div class="services-modal">
+
+    <div class="services-modal-content">
+      <div class="services-modal-body">
+          <div class="services-modal-header">
+            <h2>Выберите вид <br> ремонта:</h2>
+          </div>
+
+          <form action="#" id="installationConditioner">
+              <div class="conditioners__list">
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="onWall">
+                    <label for="onWall">Чистка блоков</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="multisplit">
+                    <label for="multisplit">Чистка дренажной системы</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="cassette">
+                    <label for="cassette">Проверка и дозаправка фриона</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="floor">
+                    <label for="floor">Диагностика режимов</label>
+                  </div>
+                  <div class="conditioners__list-row">
+                    <input class="custom-radio-button" type="radio" name="typeOfConditioner" id="canal">
+                    <label for="canal">Проверка электрических соединений</label>
+                  </div>
+              </div>
+              
+              <div class="input-group">
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="text" placeholder="Фирма кондиционера">
+                  </div>
+                </div>
+                <div class="services-form__block">
+                  <div class="services-form-formControl">
+                    <input name="order-form-phone" id="main-form-phone" type="tel" placeholder="Номер телефона">
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-form-submit__block">
+                <button type="submit" id="order-form-submitButton">Отправить заявку</button>
+              </div>
+          </form>
+          
+      </div>
+
+      <div class="order-modal-footer">
+        <p>Отправляя форму, я соглашаюсь с <a href="privacy-policy.html">политикой</a>
+          обработки персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------ ---->
 
 
     </div>
@@ -509,6 +906,7 @@
     <script type="text/javascript" src="js/fullpage.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/modals.js"></script>
+    <script type="text/javascript" src="js/services-modals.js"></script>
     <script type="text/javascript">
       new fullpage("#fullpage", {
         //options
